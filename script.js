@@ -5,7 +5,7 @@ const ANSWER_LENGTH = 5;
 
 async function init() {
 
-    const currentGuess = '';
+    let currentGuess = '';
 
     function addLetter (letter) {
         if (currentGuess.length < ANSWER_LENGTH) {
@@ -14,7 +14,7 @@ async function init() {
             currentGuess = currentGuess.substring(0, currentGuess.length - 1) + letter;
         }
 
-        letters[currentGuess.length]
+        letters[currentGuess.length -1].innerText = letter;
     }
 
     document.addEventListener('keydown', function handleKeyPress (event) {
