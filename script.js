@@ -32,9 +32,18 @@ async function init() {
             return;
         }
 
+        if (currentGuess === word) {
+            // win
+            alert('you win!');
+            return;
+        }
+
         // TODO validate the word
 
         // TODO do all marking as "corect" "close" or "wrong"
+
+        const guessParts = currentGuess.split("");
+        const map = makeMap(wordParts);
 
         // TODO did they win or lose?
 
@@ -67,7 +76,7 @@ function isLetter(letter) {
   }
 
 function setLoading(isLoading) {
-    loadingDiv.classList.toggle('hidden', !isLoading);
+    loadingDiv.classList.toggle('show', isLoading);
   }
 
 init();
