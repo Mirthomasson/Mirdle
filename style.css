@@ -96,7 +96,7 @@
      but just not shown. display: none doesn't take up space */
  
   .info-bar {
-    visibility: hidden;
+    visibility: visible;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -104,7 +104,7 @@
   }
 
   .show {
-    visibility: visible;
+    visibility: hidden;
   }
   
   
